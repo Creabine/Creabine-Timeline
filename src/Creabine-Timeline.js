@@ -83,16 +83,17 @@ function CreabineTimeline(options){
         _fakerDiv2.innerText = "Create by Creabine 2017.02.10";
         var _hrDiv = document.createElement("div");
         _hrDiv.className = "TimeLine-Line";
-        var _endWordsSpan = document.createElement("span");
-        _endWordsSpan.innerText = _endWords;
-        _hrDiv.appendChild(_endWordsSpan);
         _hr = document.createElement("hr");
         _hrDiv.appendChild(_hr);
         _timeLine.appendChild(_fakerDiv1);
         _timeLine.appendChild(_hrDiv);
         _timeLine.appendChild(_fakerDiv2);
         _root.appendChild(_timeLine);  
-
+        // TimeLine-End
+        var _endWordsDiv = document.createElement("div");
+        _endWordsDiv.className = "TimeLine-End";
+        _endWordsDiv.innerText = _endWords;
+        _root.appendChild(_endWordsDiv); 
         calculateHR();   
     }
     function calculateHR(){

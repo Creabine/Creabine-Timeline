@@ -4,6 +4,8 @@
 @import "compass/css3";
 
 
+/* 10/16=62.5% */
+html {font-size: 62.5%;}
 
 .Creabine-TimeLine{
 	max-width: 970px;
@@ -70,7 +72,7 @@
 	}
 	.TimeLine-Line{
 		width: 44px;
-		height: 20px;
+		height: 0px;
 	    padding: 3px 8px;
 	    font-size: 1.4rem;
 	    color: #222;
@@ -93,7 +95,12 @@
     			left: -9px;
 			}
 		}
-	    
+	}
+	.TimeLine-End{
+		width: 100px;
+	    margin: 0 auto;
+	    text-align: center;
+	    font-size: 1.4rem;
 	}
 }
 

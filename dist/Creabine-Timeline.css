@@ -17,6 +17,9 @@ a img { border: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
 /* css3 */
+/* 10/16=62.5% */
+html { font-size: 62.5%; }
+
 .Creabine-TimeLine { max-width: 970px; min-height: 400px; margin: 50px auto; position: relative; }
 .Creabine-TimeLine .TimeLine { margin-top: 20px; }
 .Creabine-TimeLine .TimeLine span { z-index: 10; position: relative; top: -20px; }
@@ -27,9 +30,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .Creabine-TimeLine .TimeLine-Item .left:before, .Creabine-TimeLine .TimeLine .left:before { content: ''; border: 10px solid transparent; border-left: 15px solid #e8e8e8; position: absolute; right: 45px; top: 0; }
 .Creabine-TimeLine .TimeLine-Item .right:after, .Creabine-TimeLine .TimeLine .right:after { content: ''; border: 10px solid transparent; border-right: 15px solid #e8e8e8; position: absolute; right: -25px; top: 0; }
 .Creabine-TimeLine .TimeLine-Item .Item-Time, .Creabine-TimeLine .TimeLine .Item-Time { background-color: #f88f8f; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; padding: 3px 8px; font-size: 1.4rem; color: #fff; z-index: 10; position: relative; }
-.Creabine-TimeLine .TimeLine-Line { width: 44px; height: 20px; padding: 3px 8px; font-size: 1.4rem; color: #222; z-index: 5; }
+.Creabine-TimeLine .TimeLine-Line { width: 44px; height: 0px; padding: 3px 8px; font-size: 1.4rem; color: #222; z-index: 5; }
 .Creabine-TimeLine .TimeLine-Line hr { width: 2px; height: 300px; border: 0; background-color: #e8e8e8; margin: 0 auto; position: relative; bottom: 300px; }
 .Creabine-TimeLine .TimeLine-Line hr:after { content: ''; border: 10px solid transparent; border-top-color: #e8e8e8; position: absolute; bottom: -10px; left: -9px; }
+.Creabine-TimeLine .TimeLine-End { width: 100px; margin: 0 auto; text-align: center; font-size: 1.4rem; }
 
 @media screen and (max-width: 970px) { .Creabine-TimeLine { max-width: 550px; }
   .Creabine-TimeLine .TimeLine-Item { padding: 0 10px; justify-content: center; margin: 0 0 20px 0; }
