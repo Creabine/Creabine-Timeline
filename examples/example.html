@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Creabine-Timeline</title>
+	<link rel="stylesheet" href="../dist/Creabine-Timeline.min.css">
+    <script src="../dist/Creabine-Timeline.min.js"></script>
+</head>
+<body style="width: 1000px;margin: 0 auto;">
+
+	<div id="timeLine"></div>
+
+
+<script>
+	var timeLineItemList = [
+  		{
+  			time:'1996',
+  			contentList:[
+	  			'公司成立',
+	  			'获得中国首批民营企业进出口贸易资格；'
+  			]
+  		},
+  		{
+  			time:'2008',
+  			contentList:[
+	  			'供应链管理部门成立',
+	  			'开始服务海外采购及建筑工程投标项目；'
+  			]
+  		},
+  		{
+  			time:'2010',
+  			contentList:[
+  				'公司转型成为专业供应链管理服务提供商，为客户提供量身定做的QA、QC、验厂以及供应链优化、金融、信息化等服务；',
+  			]
+  		},
+  		{
+  			time:'2012',
+  			contentList:[
+  				'绍兴验货中心成立',
+  				'验货中心全检服务，品类覆盖面料、服装及其他；'
+  			]
+  		},
+  		{
+  			time:'2013',
+  			contentList:[
+  				'上海分公司成立',
+  				'为买手提供一站式服务，提供供应商筛选、培训、产品QA等服务；'
+  			]
+  		},
+  		{
+  			time:'2014',
+  			contentList:[
+  				'通过ISO9001:2008质量管理体系认证；',
+  			]
+  		},
+  		{
+  			time:'2016',
+  			contentList:[
+  				'大仁供应链自主研发业务管理及数据分析平台SCM Pro正式上线；',
+  			]
+  		},
+  ]
+
+  new CreabineTimeline({
+  		root:'timeLine',
+  		itemList:timeLineItemList,
+  		startDirection: true,
+  		endWords:'持续更新中',
+  })
+</script>	
+</body>
+</html>

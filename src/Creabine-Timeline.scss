@@ -1,0 +1,142 @@
+/* reset */
+@import "compass/reset";
+/* css3 */
+@import "compass/css3";
+
+
+
+.Creabine-TimeLine{
+	max-width: 970px;
+	min-height: 400px;
+	margin:50px auto;
+	position:relative;
+	.TimeLine{
+		margin-top: 20px;
+		span{
+			z-index:10;
+			position:relative;
+			top: -20px;
+		}
+		div:last-child{margin:0;}
+	}
+	.TimeLine-Item,.TimeLine{
+		padding: 0px 30px;
+		display: flex;
+		justify-content: space-around;
+		align-items:center;
+		.Item-Content{
+			width: 380px;
+			background-color: #e8e8e8;
+			padding: 5px 10px;
+			@include border-radius(5px);
+			position:relative;
+			p{
+				padding: 0px;
+				color: #222;
+				font-size: 1.4rem;
+				line-height: 24px;
+				text-align: left;
+			}
+		}
+		.left{
+			&:before{
+				content: '';
+			    border: 10px solid transparent;
+			    border-left: 15px solid #e8e8e8;
+			    position: absolute;
+			    right: 45px;
+			    top: 0;
+			}
+		}
+		.right{
+			&:after{
+				content: '';
+			    border: 10px solid transparent;
+			    border-right: 15px solid #e8e8e8;
+			    position: absolute;
+			    right: -25px;
+			    top: 0;
+			}
+		}
+		.Item-Time{
+			background-color: #f88f8f;
+			@include border-radius(10px);
+			padding: 3px 8px;
+			font-size: 1.4rem;
+			color: #fff;
+			z-index: 10;
+			position:relative;
+		}
+	}
+	.TimeLine-Line{
+		width: 44px;
+		height: 20px;
+	    padding: 3px 8px;
+	    font-size: 1.4rem;
+	    color: #222;
+	    z-index: 5;
+	    //position: relative;
+		hr{
+			width: 2px;
+		    height: 300px;
+		    border: 0;
+		    background-color: #e8e8e8;
+		    margin: 0 auto;
+		    position: relative;
+		    bottom: 300px;
+		    &:after{
+				content: '';
+				border:10px solid transparent;
+				border-top-color: #e8e8e8;
+				position:absolute;
+				bottom: -10px;
+    			left: -9px;
+			}
+		}
+	    
+	}
+}
+
+// for phone
+@media screen and (max-width:970px){
+	.Creabine-TimeLine{
+		max-width: 550px;
+		.TimeLine-Item{
+			padding: 0 10px;
+			justify-content:center;
+			margin: 0 0 20px 0;
+			div{
+				&:first-child{display:none !important;}
+				&:last-child{
+					display:block;
+					visibility: visible !important;
+					margin: 0 0 0 20px;
+				}				
+			}
+			.left,.right{
+				&:after,&:before{
+					content: '';
+				    border: 10px solid transparent;
+				    border-right: 15px solid #e8e8e8;
+				    position: absolute;
+				    right: -25px;
+				    top: 0;
+				}
+			}
+		}
+		.TimeLine{
+			padding: 0 10px;
+			justify-content:center;
+			margin: 0 0 20px 0;
+			div:first-child{display:none;}
+			div:last-child{margin: 0 0 0 20px;}
+		}
+		.TimeLine-end{
+			top: -12px;
+    		left: -210px;
+		}
+		.TimeLine-Line{
+			left: 64px;
+		}
+	}
+}
