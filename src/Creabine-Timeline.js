@@ -90,10 +90,12 @@ function CreabineTimeline(options){
         _timeLine.appendChild(_fakerDiv2);
         _root.appendChild(_timeLine);  
         // TimeLine-End
-        var _endWordsDiv = document.createElement("div");
-        _endWordsDiv.className = "TimeLine-End";
-        _endWordsDiv.innerText = _endWords;
-        _root.appendChild(_endWordsDiv); 
+        if(_endWords){
+            var _endWordsDiv = document.createElement("div");
+            _endWordsDiv.className = "TimeLine-End";
+            _endWordsDiv.innerText = _endWords;
+            _root.appendChild(_endWordsDiv); 
+        }
         calculateHR();   
     }
     function calculateHR(){

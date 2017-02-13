@@ -3,7 +3,9 @@ var minicss=require('gulp-minify-css');
 var uglify=require('gulp-uglify');
 var rename=require('gulp-rename');
 var jshint=require('gulp-jshint');
-var compass= require('gulp-compass');
+var compass=require('gulp-compass');
+var clean=require('gulp-clean');
+var runSequence=require('gulp-run-sequence');
 
 gulp.task('jshint',function(){
     return gulp.src('./src/*.js')
@@ -34,6 +36,13 @@ gulp.task('minijs',function(){
     .pipe(gulp.dest('./dist'));
 })
 
-gulp.task('default',['jshint'],function(){
+
+gulp.task('clean', function () {
+  return gulp.src('dist/*', {read: false})
+    .pipe(clean());
+});
+
+gulp.task('default',function(){
     gulp.start('minicss','minijs');
+    runSequence('clean',['minicss','minijs']);
 })
