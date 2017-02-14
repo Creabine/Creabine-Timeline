@@ -7,7 +7,7 @@ function CreabineTimeline(options){
     }
     var _itemList = options.itemList;
     var _endWords = options.endWords;
-    var _startDirection = options.startDirection;
+    var _startDirectionLeft = options.startDirectionLeft || true;
     var _root = document.getElementById(options.root);
     var _hr = null;
     function initElements() {
@@ -22,7 +22,7 @@ function CreabineTimeline(options){
             var _contentRight = document.createElement("div");
             _contentLeft.className = "Item-Content";
             _contentRight.className = "Item-Content";
-            _startDirection ? _contentRight.style.visibility = "hidden" : _contentLeft.style.visibility = "hidden";
+            _startDirectionLeft ? _contentRight.style.visibility = "hidden" : _contentLeft.style.visibility = "hidden";
             for (var j = 0; j < _itemList[i].contentList.length; j++) {
                 var leftP = document.createElement("p");
                 var rightP = document.createElement("p");
@@ -32,7 +32,7 @@ function CreabineTimeline(options){
                 _contentRight.appendChild(rightP);
             }
             var _itemTime = document.createElement("div");
-            if( _startDirection ){
+            if( _startDirectionLeft ){
                 if( i%2 == 0 ){
                     _itemTime.className = "Item-Time left";
                 }else{
@@ -51,8 +51,8 @@ function CreabineTimeline(options){
             _item.appendChild(_contentRight);
             _root.appendChild(_item);
 
-            //startDirection
-            if( _startDirection ){
+            //startDirectionLeft
+            if( _startDirectionLeft ){
                 if( i%2 == 0 ){
                     _contentLeft.style.visibility = "visible";
                     _contentRight.style.visibility = "hidden";

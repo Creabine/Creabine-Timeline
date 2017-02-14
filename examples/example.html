@@ -7,9 +7,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Creabine-Timeline</title>
 	<link rel="stylesheet" href="../dist/Creabine-Timeline.css">
-    <script src="../src/Creabine-Timeline.js"></script>
+  <script src="../src/Creabine-Timeline.js"></script>
 </head>
 <body>
+
+	<div style="font-size: 26px;text-align: center;padding: 60px 10px;">
+		尝试手动改变浏览器窗口宽度或使用<code style="color: red;">F12--->Ctrl+Shift+M</code> 来查看响应式效果
+	</div>
 
 	<div id="timeLine"></div>
 
@@ -69,7 +73,7 @@
   new CreabineTimeline({
   		root:'timeLine',
   		itemList:timeLineItemList,
-  		startDirection: true,
+  		startDirectionLeft: true,
   		endWords:'持续更新中',
   })
 </script>	
