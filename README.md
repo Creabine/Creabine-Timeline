@@ -1,6 +1,6 @@
 # Creabine-Timeline
 ## 介绍
-一款响应式时间轴插件
+一款响应式时间轴插件。 [example](http://creabine.info/mywebsite/demo/Creabine-Timeline.html)
 ## 使用
 1 引用文件：
 
@@ -36,7 +36,7 @@ new CreabineTimeline({
 ### Options
 | name          	| type         | default         | required   |
 | --------      	| ---------    |:----------:     | ----------:| 
-| root         	    | String       | NaN             |  yes       |
-| itemList     	    | Object array | NaN             |  yes       |
-| startDirectionLeft| Boolean 	   | true            |  no        |
-| endWords      	| String       | NaN             |  no        |
+| root         	    | string       | NaN             |  yes       |
+| itemList     	    | object array | NaN             |  yes       |
+| startDirectionLeft| boolean 	   | true            |  no        |
+| endWords      	| string       | NaN             |  no        |
